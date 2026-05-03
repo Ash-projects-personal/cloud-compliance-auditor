@@ -1,0 +1,32 @@
+{
+    "audit_timestamp": "2026-05-03T18:42:54.950019",
+    "overall_compliance_score": "100.0%",
+    "baseline_score": "62.0%",
+    "improvement": "+38.0%",
+    "controls_evaluated": 14,
+    "controls_passing": 14,
+    "controls_failing": 0,
+    "by_service": {
+        "IAM": {
+            "pass": 4,
+            "fail": 0
+        },
+        "S3": {
+            "pass": 3,
+            "fail": 0
+        },
+        "CloudTrail": {
+            "pass": 2,
+            "fail": 0
+        },
+        "EC2": {
+            "pass": 3,
+            "fail": 0
+        },
+        "RDS": {
+            "pass": 2,
+            "fail": 0
+        }
+    },
+    "findings": []
+}
