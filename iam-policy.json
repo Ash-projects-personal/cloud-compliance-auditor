@@ -1,0 +1,59 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AuditorReadOnly",
+      "Effect": "Allow",
+      "Action": [
+        "iam:Get*",
+        "iam:List*",
+        "iam:Generate*",
+        "iam:SimulatePrincipalPolicy",
+        "s3:GetBucketAcl",
+        "s3:GetBucketPolicy",
+        "s3:GetBucketPolicyStatus",
+        "s3:GetBucketPublicAccessBlock",
+        "s3:GetBucketEncryption",
+        "s3:GetBucketLogging",
+        "s3:GetBucketLocation",
+        "s3:GetBucketVersioning",
+        "s3:ListAllMyBuckets",
+        "ec2:Describe*",
+        "rds:Describe*",
+        "rds:ListTagsForResource",
+        "cloudtrail:DescribeTrails",
+        "cloudtrail:GetTrailStatus",
+        "cloudtrail:GetEventSelectors",
+        "cloudwatch:Describe*",
+        "cloudwatch:GetMetricData",
+        "config:Describe*",
+        "config:Get*",
+        "kms:DescribeKey",
+        "kms:GetKeyPolicy",
+        "kms:GetKeyRotationStatus",
+        "kms:ListKeys",
+        "kms:ListAliases",
+        "guardduty:Get*",
+        "guardduty:List*",
+        "securityhub:Describe*",
+        "securityhub:Get*",
+        "securityhub:List*"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "DenyWrites",
+      "Effect": "Deny",
+      "Action": [
+        "*:Put*",
+        "*:Create*",
+        "*:Delete*",
+        "*:Update*",
+        "*:Modify*",
+        "*:Attach*",
+        "*:Detach*"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
