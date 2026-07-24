@@ -1,0 +1,6 @@
+# Test-time dependencies. Install with:
+#   pip install -r requirements-dev.txt
+# Then run: pytest -q
+-r requirements.txt
+pytest>=8.0,<9
+moto[s3,iam,ec2]>=5.0,<6
