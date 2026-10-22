@@ -1,7 +1,4 @@
-__pycache__/
-*.pyc
-*.pyo
-.pytest_cache/
 .venv/
-outputs/*.json
-!outputs/.gitkeep
+.venv-batch3/
+__pycache__/
+.pytest_cache/

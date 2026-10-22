@@ -1,0 +1,13 @@
+{
+  "environment": "moto mocked AWS environment with known fixture states (not a real account)",
+  "checks_run": 8,
+  "resource_results": 21,
+  "pass": 12,
+  "fail": 9,
+  "note": "pass and fail counts describe the fixture states I designed, not any real account. The measured result of this run is the agreement rate between check verdicts and fixture expectations.",
+  "verdicts_matching_fixture_expectation": 21,
+  "verdicts_total": 21,
+  "agreement_rate": 1.0,
+  "mismatches": [],
+  "run_at": "2026-10-22T18:15:22.646206+00:00"
+}

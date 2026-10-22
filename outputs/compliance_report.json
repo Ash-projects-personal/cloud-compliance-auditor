@@ -1,32 +1,187 @@
 {
-    "audit_timestamp": "2026-05-03T18:42:54.950019",
-    "overall_compliance_score": "100.0%",
-    "baseline_score": "62.0%",
-    "improvement": "+38.0%",
-    "controls_evaluated": 14,
-    "controls_passing": 14,
-    "controls_failing": 0,
-    "by_service": {
-        "IAM": {
-            "pass": 4,
-            "fail": 0
-        },
-        "S3": {
-            "pass": 3,
-            "fail": 0
-        },
-        "CloudTrail": {
-            "pass": 2,
-            "fail": 0
-        },
-        "EC2": {
-            "pass": 3,
-            "fail": 0
-        },
-        "RDS": {
-            "pass": 2,
-            "fail": 0
-        }
+  "generated_at": "2026-10-22T18:15:22.646206+00:00",
+  "environment": "moto mocked AWS environment with known fixture states (not a real account)",
+  "results": [
+    {
+      "check_id": "CIS-1.4",
+      "control": "access key rotation",
+      "resource": "key-user/AKIARZPUZDIKGNDSTZFU",
+      "status": "PASS",
+      "detail": "key age 0 days (limit 90)",
+      "expected": "PASS"
     },
-    "findings": []
+    {
+      "check_id": "CIS-1.5",
+      "control": "password policy",
+      "resource": "account",
+      "status": "FAIL",
+      "detail": "minimum length 8 < 14; RequireSymbols not required; max password age 180 not within 90 days; reuse prevention 1 < 24",
+      "expected": "FAIL"
+    },
+    {
+      "check_id": "CIS-1.10",
+      "control": "MFA for console users",
+      "resource": "key-user",
+      "status": "PASS",
+      "detail": "no console password, check not applicable",
+      "expected": "PASS"
+    },
+    {
+      "check_id": "CIS-1.10",
+      "control": "MFA for console users",
+      "resource": "console-user",
+      "status": "FAIL",
+      "detail": "0 MFA devices registered",
+      "expected": "FAIL"
+    },
+    {
+      "check_id": "CIS-1.10",
+      "control": "MFA for console users",
+      "resource": "api-user",
+      "status": "PASS",
+      "detail": "no console password, check not applicable",
+      "expected": "PASS"
+    },
+    {
+      "check_id": "CIS-2.1",
+      "control": "S3 server access logging",
+      "resource": "log-destination",
+      "status": "FAIL",
+      "detail": "logging disabled",
+      "expected": "FAIL"
+    },
+    {
+      "check_id": "CIS-2.1",
+      "control": "S3 server access logging",
+      "resource": "logs-on",
+      "status": "PASS",
+      "detail": "logging enabled",
+      "expected": "PASS"
+    },
+    {
+      "check_id": "CIS-2.1",
+      "control": "S3 server access logging",
+      "resource": "blocked",
+      "status": "FAIL",
+      "detail": "logging disabled",
+      "expected": "FAIL"
+    },
+    {
+      "check_id": "CIS-2.3",
+      "control": "S3 public access block",
+      "resource": "log-destination",
+      "status": "FAIL",
+      "detail": "no public access block configured",
+      "expected": "FAIL"
+    },
+    {
+      "check_id": "CIS-2.3",
+      "control": "S3 public access block",
+      "resource": "logs-on",
+      "status": "FAIL",
+      "detail": "no public access block configured",
+      "expected": "FAIL"
+    },
+    {
+      "check_id": "CIS-2.3",
+      "control": "S3 public access block",
+      "resource": "blocked",
+      "status": "PASS",
+      "detail": "all four block settings on",
+      "expected": "PASS"
+    },
+    {
+      "check_id": "CIS-4.1",
+      "control": "no world open ingress on port 22",
+      "resource": "sg-2887af8557c14bbbd",
+      "status": "PASS",
+      "detail": "port 22 not open to the world",
+      "expected": "PASS"
+    },
+    {
+      "check_id": "CIS-4.1",
+      "control": "no world open ingress on port 22",
+      "resource": "sg-623c24a1e4734c6f2",
+      "status": "PASS",
+      "detail": "port 22 not open to the world",
+      "expected": "PASS"
+    },
+    {
+      "check_id": "CIS-4.1",
+      "control": "no world open ingress on port 22",
+      "resource": "sg-4e5f9e13df2e5d84f",
+      "status": "FAIL",
+      "detail": "port 22 open to 0.0.0.0/0",
+      "expected": "FAIL"
+    },
+    {
+      "check_id": "CIS-4.1",
+      "control": "no world open ingress on port 22",
+      "resource": "sg-8521b2a45b68614af",
+      "status": "PASS",
+      "detail": "port 22 not open to the world",
+      "expected": "PASS"
+    },
+    {
+      "check_id": "CIS-4.2",
+      "control": "no world open ingress on port 3389",
+      "resource": "sg-2887af8557c14bbbd",
+      "status": "PASS",
+      "detail": "port 3389 not open to the world",
+      "expected": "PASS"
+    },
+    {
+      "check_id": "CIS-4.2",
+      "control": "no world open ingress on port 3389",
+      "resource": "sg-623c24a1e4734c6f2",
+      "status": "PASS",
+      "detail": "port 3389 not open to the world",
+      "expected": "PASS"
+    },
+    {
+      "check_id": "CIS-4.2",
+      "control": "no world open ingress on port 3389",
+      "resource": "sg-4e5f9e13df2e5d84f",
+      "status": "PASS",
+      "detail": "port 3389 not open to the world",
+      "expected": "PASS"
+    },
+    {
+      "check_id": "CIS-4.2",
+      "control": "no world open ingress on port 3389",
+      "resource": "sg-8521b2a45b68614af",
+      "status": "PASS",
+      "detail": "port 3389 not open to the world",
+      "expected": "PASS"
+    },
+    {
+      "check_id": "CIS-4.3",
+      "control": "VPC flow logs",
+      "resource": "vpc-213b0a5bbd752adf1",
+      "status": "FAIL",
+      "detail": "no flow log",
+      "expected": "FAIL"
+    },
+    {
+      "check_id": "CIS-4.3",
+      "control": "VPC flow logs",
+      "resource": "vpc-d3332968d97fce82c",
+      "status": "FAIL",
+      "detail": "no flow log",
+      "expected": "FAIL"
+    }
+  ],
+  "summary": {
+    "environment": "moto mocked AWS environment with known fixture states (not a real account)",
+    "checks_run": 8,
+    "resource_results": 21,
+    "pass": 12,
+    "fail": 9,
+    "note": "pass and fail counts describe the fixture states I designed, not any real account. The measured result of this run is the agreement rate between check verdicts and fixture expectations.",
+    "verdicts_matching_fixture_expectation": 21,
+    "verdicts_total": 21,
+    "agreement_rate": 1.0,
+    "mismatches": [],
+    "run_at": "2026-10-22T18:15:22.646206+00:00"
+  }
 }
